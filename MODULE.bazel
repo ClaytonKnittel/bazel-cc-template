@@ -16,6 +16,15 @@ git_override(
     # Even better, set up Renovate and let it do the work for you (see "Suggestion: Updates" in the README).
 )
 
+bazel_dep(name = "euler-util", dev_dependency = True)
+git_override(
+    module_name = "euler-util",
+    commit = "23a2585bfb427b4cc398448dfa6387ebe9570df3",
+    remote = "https://github.com/ClaytonKnittel/euler-util.git",
+    # Replace the commit hash (above) with the latest (https://github.com/hedronvision/bazel-compile-commands-extractor/commits/main).
+    # Even better, set up Renovate and let it do the work for you (see "Suggestion: Updates" in the README).
+)
+
 bazel_dep(name = "buildifier_prebuilt", version = "6.4.0", dev_dependency = True)
 
 bazel_dep(name = "abseil-cpp", version = "20240116.2")
