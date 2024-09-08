@@ -16,7 +16,8 @@ refresh_compile_commands(
     # Specify the targets of interest.
     # For example, specify a dict of targets and any flags required to build.
     targets = {
-        "//...": "",
+        # Turn off these flags to not confuse the compile commands generator when building abseil.
+        "//...": "--process_headers_in_dependencies=false --features=-parse_headers",
     },
     # No need to add flags already in .bazelrc. They're automatically picked up.
     # If you don't need flags, a list of targets is also okay, as is a single target string.
